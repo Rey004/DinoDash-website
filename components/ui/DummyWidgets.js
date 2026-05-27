@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 /**
  * DummyWidgets — minimal placeholder content for Act 3.
- * Just a thin border + the gist of each widget. No corner ticks,
- * no scanlines, no decoration.
+ * Sizes scale down at small breakpoints so the widgets stay legible
+ * inside a smaller preview frame on phones and tablets.
  */
 
 function Frame({ children, className = "" }) {
@@ -22,9 +22,9 @@ function Frame({ children, className = "" }) {
 export function DummyLogo() {
   return (
     <Frame>
-      <div className="flex h-full items-center gap-1.5 px-2">
-        <span className="inline-block h-3 w-3 border border-white/70" />
-        <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-white/85">
+      <div className="flex h-full items-center gap-1 px-1 sm:gap-1.5 sm:px-2">
+        <span className="inline-block h-2 w-2 border border-white/70 sm:h-3 sm:w-3" />
+        <span className="font-mono text-[7px] uppercase tracking-[0.25em] text-white/85 sm:text-[9px] sm:tracking-[0.3em]">
           dinodash
         </span>
       </div>
@@ -41,14 +41,14 @@ export function DummyTodaysRun() {
   }, []);
   return (
     <Frame>
-      <div className="flex h-full items-center justify-between gap-1.5 px-2">
-        <span className="font-mono text-[8px] uppercase tracking-[0.3em] text-white/60">
+      <div className="flex h-full items-center justify-between gap-1 px-1.5 sm:gap-1.5 sm:px-2">
+        <span className="font-mono text-[6px] uppercase tracking-[0.25em] text-white/60 sm:text-[8px] sm:tracking-[0.3em]">
           run
         </span>
-        <span className="font-mono text-[12px] tracking-[0.15em] text-white">
+        <span className="font-mono text-[10px] tracking-[0.1em] text-white sm:text-[12px] sm:tracking-[0.15em]">
           {n}/3
         </span>
-        <span className="font-mono text-[10px] text-white/70">›</span>
+        <span className="font-mono text-[8px] text-white/70 sm:text-[10px]">›</span>
       </div>
     </Frame>
   );
@@ -59,25 +59,25 @@ export function DummySyslog() {
   return (
     <Frame>
       <div className="flex h-full flex-col">
-        <div className="flex items-center justify-between border-b border-white/15 px-2 py-1">
-          <div className="flex items-center gap-1">
-            <span className="h-1 w-1 rounded-full border border-white/70" />
-            <span className="h-1 w-1 rounded-full border border-white/70" />
-            <span className="h-1 w-1 rounded-full border border-white/70" />
+        <div className="flex items-center justify-between border-b border-white/15 px-1.5 py-0.5 sm:px-2 sm:py-1">
+          <div className="flex items-center gap-0.5 sm:gap-1">
+            <span className="h-[2px] w-[2px] rounded-full border border-white/70 sm:h-1 sm:w-1" />
+            <span className="h-[2px] w-[2px] rounded-full border border-white/70 sm:h-1 sm:w-1" />
+            <span className="h-[2px] w-[2px] rounded-full border border-white/70 sm:h-1 sm:w-1" />
           </div>
-          <span className="font-mono text-[7px] uppercase tracking-[0.3em] text-white/55">
+          <span className="font-mono text-[5px] uppercase tracking-[0.25em] text-white/55 sm:text-[7px] sm:tracking-[0.3em]">
             sys.log
           </span>
         </div>
-        <div className="flex flex-1 items-center gap-1.5 px-2">
-          <span className="font-mono text-[10px] text-white/55">{">"}</span>
+        <div className="flex flex-1 items-center gap-1 px-1.5 sm:gap-1.5 sm:px-2">
+          <span className="font-mono text-[8px] text-white/55 sm:text-[10px]">{">"}</span>
           <span className="flex-1">
-            <ShimmerLine width="80%" height={4} />
-            <span className="mt-1 block">
-              <ShimmerLine width="55%" height={4} delay="0.2s" />
+            <ShimmerLine width="80%" height={3} />
+            <span className="mt-0.5 block sm:mt-1">
+              <ShimmerLine width="55%" height={3} delay="0.2s" />
             </span>
           </span>
-          <span className="inline-block h-2.5 w-[2px] bg-white/80 animate-blink" />
+          <span className="inline-block h-2 w-px bg-white/80 animate-blink sm:h-2.5 sm:w-[2px]" />
         </div>
       </div>
     </Frame>
@@ -88,20 +88,20 @@ export function DummySyslog() {
 export function DummySearch() {
   return (
     <Frame className="border-white/25">
-      <div className="flex h-full flex-col items-center justify-center gap-2 px-3">
-        <div className="font-mono text-[18px] uppercase tracking-[0.2em] text-white/80">
+      <div className="flex h-full flex-col items-center justify-center gap-1.5 px-2 sm:gap-2 sm:px-3">
+        <div className="font-mono text-[12px] uppercase tracking-[0.18em] text-white/80 sm:text-[18px] sm:tracking-[0.2em]">
           Google
         </div>
-        <div className="flex w-full items-center gap-1.5 rounded-full border border-white/40 bg-black/60 px-3 py-1">
-          <span className="font-mono text-[10px] text-white/50">⌕</span>
+        <div className="flex w-full items-center gap-1 rounded-full border border-white/40 bg-black/60 px-2 py-0.5 sm:gap-1.5 sm:px-3 sm:py-1">
+          <span className="font-mono text-[8px] text-white/50 sm:text-[10px]">⌕</span>
           <span className="flex-1">
-            <ShimmerLine width="60%" height={3} />
+            <ShimmerLine width="60%" height={2} />
           </span>
-          <span className="inline-block h-2 w-px bg-white/80 animate-blink" />
+          <span className="inline-block h-1.5 w-px bg-white/80 animate-blink sm:h-2" />
         </div>
-        <div className="flex items-center gap-1.5 font-mono text-[8px] uppercase tracking-[0.25em] text-white/45">
+        <div className="flex items-center gap-1 font-mono text-[6px] uppercase tracking-[0.2em] text-white/45 sm:gap-1.5 sm:text-[8px] sm:tracking-[0.25em]">
           press
-          <kbd className="inline-flex min-w-[28px] items-center justify-center border border-white/60 bg-white/5 px-1 py-px text-[7px] tracking-[0.2em]">
+          <kbd className="inline-flex min-w-[20px] items-center justify-center border border-white/60 bg-white/5 px-0.5 py-px text-[5px] tracking-[0.15em] sm:min-w-[28px] sm:px-1 sm:text-[7px] sm:tracking-[0.2em]">
             SPACE
           </kbd>
           to start
@@ -115,24 +115,24 @@ export function DummySearch() {
 export function DummyMemoryPanel() {
   return (
     <Frame>
-      <div className="flex h-full flex-col gap-2 p-2">
-        <div className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/80">
+      <div className="flex h-full flex-col gap-1.5 p-1.5 sm:gap-2 sm:p-2">
+        <div className="font-mono text-[7px] uppercase tracking-[0.2em] text-white/80 sm:text-[9px] sm:tracking-[0.25em]">
           memory
         </div>
-        <div className="flex gap-1">
-          <span className="rounded-full border border-white bg-white px-2 py-px font-mono text-[7px] uppercase tracking-[0.25em] text-black">
+        <div className="flex gap-0.5 sm:gap-1">
+          <span className="rounded-full border border-white bg-white px-1.5 py-px font-mono text-[5px] uppercase tracking-[0.2em] text-black sm:px-2 sm:text-[7px] sm:tracking-[0.25em]">
             history
           </span>
-          <span className="rounded-full border border-white/30 px-2 py-px font-mono text-[7px] uppercase tracking-[0.25em] text-white/55">
+          <span className="rounded-full border border-white/30 px-1.5 py-px font-mono text-[5px] uppercase tracking-[0.2em] text-white/55 sm:px-2 sm:text-[7px] sm:tracking-[0.25em]">
             stats
           </span>
         </div>
-        <div className="flex flex-1 flex-col gap-1.5 overflow-hidden">
+        <div className="flex flex-1 flex-col gap-1 overflow-hidden sm:gap-1.5">
           {Array.from({ length: 5 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-1.5">
-              <span className="inline-block h-3 w-3 shrink-0 border border-white/30" />
+            <div key={i} className="flex items-center gap-1 sm:gap-1.5">
+              <span className="inline-block h-2 w-2 shrink-0 border border-white/30 sm:h-3 sm:w-3" />
               <div className="flex-1 space-y-0.5">
-                <ShimmerLine width={`${72 - i * 8}%`} height={3} delay={`${i * 0.08}s`} />
+                <ShimmerLine width={`${72 - i * 8}%`} height={2} delay={`${i * 0.08}s`} />
                 <ShimmerLine width={`${42 - i * 5}%`} height={2} delay={`${i * 0.12}s`} />
               </div>
             </div>
@@ -147,11 +147,11 @@ export function DummyMemoryPanel() {
 export function DummyCornerLeft() {
   return (
     <Frame>
-      <div className="flex h-full items-center gap-1 px-1.5">
+      <div className="flex h-full items-center gap-0.5 px-1 sm:gap-1 sm:px-1.5">
         <Btn>★</Btn>
         <Btn>♡</Btn>
-        <span className="ml-0.5 inline-flex h-5 items-center gap-1 rounded-full border border-white/30 px-1.5 font-mono text-[7px] uppercase tracking-[0.25em] text-white/75">
-          <span className="inline-block h-1 w-1 rounded-full bg-white animate-pulse" />
+        <span className="ml-0.5 inline-flex h-3.5 items-center gap-0.5 rounded-full border border-white/30 px-1 font-mono text-[5px] uppercase tracking-[0.2em] text-white/75 sm:h-5 sm:gap-1 sm:px-1.5 sm:text-[7px] sm:tracking-[0.25em]">
+          <span className="inline-block h-[3px] w-[3px] rounded-full bg-white animate-pulse sm:h-1 sm:w-1" />
           enhanced
         </span>
       </div>
@@ -163,7 +163,7 @@ export function DummyCornerLeft() {
 export function DummyCornerRight() {
   return (
     <Frame>
-      <div className="flex h-full items-center justify-end gap-1 px-1.5">
+      <div className="flex h-full items-center justify-end gap-0.5 px-1 sm:gap-1 sm:px-1.5">
         <Btn>▥</Btn>
         <Btn>◐</Btn>
         <Btn>⚙</Btn>
@@ -174,7 +174,7 @@ export function DummyCornerRight() {
 
 function Btn({ children }) {
   return (
-    <span className="inline-flex h-5 w-5 items-center justify-center border border-white/40 text-[9px] text-white/75">
+    <span className="inline-flex h-3.5 w-3.5 items-center justify-center border border-white/40 text-[6px] text-white/75 sm:h-5 sm:w-5 sm:text-[9px]">
       {children}
     </span>
   );

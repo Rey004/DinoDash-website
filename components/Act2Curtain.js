@@ -42,6 +42,19 @@ export default function Act2Curtain() {
     };
   }, []);
 
+  const [handleSize, setHandleSize] = useState(56);
+
+  // smaller handle on phones, full on desktop
+  useEffect(() => {
+    const update = () => {
+      if (typeof window === "undefined") return;
+      setHandleSize(window.innerWidth < 640 ? 36 : 56);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   const onKey = (e) => {
     if (e.key === "ArrowLeft") setPct((p) => Math.max(0, p - 4));
     if (e.key === "ArrowRight") setPct((p) => Math.min(100, p + 4));
@@ -83,12 +96,12 @@ export default function Act2Curtain() {
         </div>
 
         {/* labels */}
-        <div className="pointer-events-none absolute left-4 top-4 z-20 inline-flex items-center gap-2 border border-black/30 bg-white/85 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.3em] text-black/80 backdrop-blur-sm">
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-black/60" />
-          before · default new tab
+        <div className="pointer-events-none absolute left-2 top-2 z-20 inline-flex items-center gap-1.5 border border-black/30 bg-white/85 px-2 py-0.5 font-mono text-[8px] uppercase tracking-[0.25em] text-black/80 backdrop-blur-sm sm:left-4 sm:top-4 sm:gap-2 sm:px-3 sm:py-1 sm:text-[10px] sm:tracking-[0.3em]">
+          <span className="inline-block h-1 w-1 rounded-full bg-black/60 sm:h-1.5 sm:w-1.5" />
+          before · default
         </div>
-        <div className="pointer-events-none absolute right-4 top-4 z-20 inline-flex items-center gap-2 border border-white/40 bg-black/70 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.3em] text-white/80 backdrop-blur-sm">
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-white/80" />
+        <div className="pointer-events-none absolute right-2 top-2 z-20 inline-flex items-center gap-1.5 border border-white/40 bg-black/70 px-2 py-0.5 font-mono text-[8px] uppercase tracking-[0.25em] text-white/80 backdrop-blur-sm sm:right-4 sm:top-4 sm:gap-2 sm:px-3 sm:py-1 sm:text-[10px] sm:tracking-[0.3em]">
+          <span className="inline-block h-1 w-1 rounded-full bg-white/80 sm:h-1.5 sm:w-1.5" />
           after · dinodash
         </div>
 
@@ -109,14 +122,14 @@ export default function Act2Curtain() {
           style={{
             left: `${pct}%`,
             top: "50%",
-            width: 56,
-            height: 56,
+            width: handleSize,
+            height: handleSize,
             borderRadius: 9999,
             transition: "transform 120ms ease",
             cursor: "ew-resize",
           }}
         >
-          <span className="flex h-full w-full items-center justify-center font-mono text-base">
+          <span className="flex h-full w-full items-center justify-center font-mono text-xs sm:text-base">
             ‹ ›
           </span>
         </button>

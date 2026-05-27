@@ -69,6 +69,7 @@ export default function Act1Boot() {
           alt=""
           data-asset="act1-skyline-bg"
           className="absolute inset-0 h-full w-full object-cover"
+          style={{ filter: "saturate(1.4) contrast(1.15) brightness(1.05)" }}
           draggable={false}
         />
         <Rain density={90} opacity={0.4} seed={11} />
