@@ -23,7 +23,6 @@ const NAV_LINKS = [
   { label: "about", href: "/about" },
   { label: "docs", href: "/docs" },
   { label: "changelog", href: "/changelog" },
-  { label: "bug report", href: "/bug-report" },
   { label: "feedback", href: "/feedback" },
 ];
 
