@@ -30,9 +30,9 @@ export default function SysLogCard({ children, className = "", withBattery = tru
       {/* body */}
       <div className="flex items-start gap-2 px-3 py-2.5">
         <span className="select-none font-mono text-[12px] leading-snug text-white/90">{">"}</span>
-        <p className="flex-1 font-mono text-[12px] leading-snug text-white/90">
+        <div className="flex-1 font-mono text-[12px] leading-snug text-white/90">
           {children}
-        </p>
+        </div>
         {withBattery && <BatteryIcon />}
       </div>
     </div>

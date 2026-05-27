@@ -28,7 +28,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${mono.variable} ${sans.variable} scroll-smooth`}>
-      <body className="grain bg-ink text-paper">
+      <body className="grain bg-ink text-paper" suppressHydrationWarning>
         <SmoothScroller />
         {children}
       </body>

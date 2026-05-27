@@ -20,11 +20,11 @@ const SECTION_LINKS = [
 ];
 
 const NAV_LINKS = [
-  { label: "about", href: "#about" },
+  { label: "about", href: "/about" },
   { label: "docs", href: "/docs" },
   { label: "changelog", href: "/changelog" },
-  { label: "bug report", href: "#bug" },
-  { label: "feedback", href: "#feedback" },
+  { label: "bug report", href: "/bug-report" },
+  { label: "feedback", href: "/feedback" },
 ];
 
 export default function SiteFooter() {

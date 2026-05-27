@@ -20,13 +20,35 @@ export default function SmoothScroller() {
     const onClick = (e) => {
       // only primary clicks, no modifier keys, no target=_blank
       if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-      const link = e.target.closest && e.target.closest('a[href^="#"]');
+      const link = e.target.closest && e.target.closest("a[href]");
       if (!link) return;
       const href = link.getAttribute("href");
-      if (!href || href === "#" || link.target === "_blank") return;
-      const id = decodeURIComponent(href.slice(1));
+      if (!href || link.target === "_blank") return;
+
+      // resolve to a same-origin URL for hash extraction
+      let url;
+      try {
+        url = new URL(href, window.location.href);
+      } catch {
+        return;
+      }
+      if (url.origin !== window.location.origin) return;
+
+      // only intercept if there's a hash to scroll to
+      if (!url.hash || url.hash === "#") return;
+
+      // and only if the hash exists on the current page (i.e. we're
+      // not navigating to a different route)
+      const samePath =
+        url.pathname === window.location.pathname ||
+        // allow "/" → "/" cross-resolve from "/#foo" links rendered on /
+        (url.pathname === "/" && window.location.pathname === "/");
+      if (!samePath) return;
+
+      const id = decodeURIComponent(url.hash.slice(1));
       const target = document.getElementById(id);
       if (!target) return;
+
       e.preventDefault();
       target.scrollIntoView({ behavior: "smooth", block: "start" });
       // keep the URL clean — strip the hash
