@@ -1,4 +1,6 @@
 import { JetBrains_Mono, Inter } from "next/font/google";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress";
 import SmoothScroller from "@/components/SmoothScroller";
 import "./globals.css";
 
@@ -27,9 +29,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${mono.variable} ${sans.variable} scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${mono.variable} ${sans.variable} scroll-smooth`}
+      suppressHydrationWarning
+    >
       <body className="grain bg-ink text-paper" suppressHydrationWarning>
         <SmoothScroller />
+        <CustomCursor />
+        <ScrollProgress />
         {children}
       </body>
     </html>

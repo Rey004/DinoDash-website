@@ -30,9 +30,50 @@ body {
   color: #000000;
 }
 
+/* Custom scrollbar — thin, monochrome, theme-matching */
+html {
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+  scrollbar-width: thin;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 9999px;
+  transition: background 200ms ease;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.45);
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 /* anchor sections shouldn't sit under the fixed header */
 section[id] {
   scroll-margin-top: 72px;
+}
+
+/* Hide the system cursor when the custom one is active. Only on
+   pointer-fine devices (the component sets the body class itself). */
+.custom-cursor-on,
+.custom-cursor-on * {
+  cursor: none !important;
+}
+
+/* but keep system cursor inside form fields so users can still see what they're doing */
+.custom-cursor-on input,
+.custom-cursor-on textarea,
+.custom-cursor-on [contenteditable] {
+  cursor: text !important;
 }
 
 /* Ambient grain overlay */
