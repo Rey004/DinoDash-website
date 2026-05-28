@@ -17,13 +17,13 @@ const sans = Inter({
 });
 
 export const metadata = {
-  title: "DinoDash — your new tab will never be the same",
+  title: "DinoDash - New Tab Experience",
   description:
     "DinoDash replaces your Chrome new tab with a cinematic dino runner. Privacy-first. Endlessly playable.",
   icons: {
-    icon: "/assets/logo-dark.webp",
-    shortcut: "/assets/logo-dark.webp",
-    apple: "/assets/logo-dark.webp",
+    icon: "/assets/favicon.webp",
+    shortcut: "/assets/favicon.webp",
+    apple: "/assets/favicon.webp",
   },
 };
 
