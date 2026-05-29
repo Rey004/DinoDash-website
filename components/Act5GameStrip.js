@@ -33,7 +33,7 @@ const FEATURES = [
   },
 ];
 
-export default function Act4GameStrip() {
+export default function Act5GameStrip() {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -52,7 +52,7 @@ export default function Act4GameStrip() {
       <div className="mx-4 flex items-end justify-between gap-4 pb-8 sm:mx-8 sm:gap-6 sm:pb-12">
         <div>
           <div className="font-mono text-[10px] uppercase tracking-[0.4em] text-white/50">
-            act 04
+            act 05
           </div>
           <h2 className="mt-2 font-mono text-2xl uppercase tracking-tight sm:text-4xl md:text-5xl">
             the game, on rails

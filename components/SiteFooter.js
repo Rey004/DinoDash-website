@@ -42,16 +42,25 @@ export default function SiteFooter() {
             no funny business. just a dino, a city, and a number going up.
           </p>
 
-          {/* instagram only */}
-          <div className="mt-8">
+          {/* socials */}
+          <div className="mt-8 flex flex-wrap items-center gap-2">
             <a
-              href="https://instagram.com"
+              href="#"
               target="_blank"
               rel="noreferrer"
-              className="btn-press inline-flex items-center gap-2 border border-white/30 bg-white/[0.04] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.3em] text-white/75 hover:border-white hover:text-white"
+              aria-label="Instagram"
+              className="btn-press inline-flex h-9 w-9 items-center justify-center border border-white/30 bg-white/[0.04] text-white/75 hover:border-white hover:text-white"
             >
               <InstagramGlyph />
-              instagram
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Product Hunt"
+              className="btn-press inline-flex h-9 w-9 items-center justify-center border border-white/30 bg-white/[0.04] text-white/75 hover:border-white hover:text-white"
+            >
+              <ProductHuntGlyph />
             </a>
           </div>
         </div>
@@ -159,8 +168,8 @@ function InstagramGlyph() {
     <svg
       aria-hidden
       viewBox="0 0 24 24"
-      width="12"
-      height="12"
+      width="14"
+      height="14"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.6"
@@ -170,6 +179,26 @@ function InstagramGlyph() {
       <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17" cy="7" r="0.9" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function ProductHuntGlyph() {
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 24 24"
+      width="14"
+      height="14"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="9.25" />
+      <path d="M9.5 7.5h4a3 3 0 0 1 0 6H9.5V17" />
+      <path d="M9.5 7.5v6" />
     </svg>
   );
 }

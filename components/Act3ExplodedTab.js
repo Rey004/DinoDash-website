@@ -24,7 +24,7 @@ import {
  * replace its `<DummyXxx />` child with an `<img>` (see ASSETS.md for
  * the cropping notes per slot).
  */
-export default function Act5ExplodedTab() {
+export default function Act3ExplodedTab() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,

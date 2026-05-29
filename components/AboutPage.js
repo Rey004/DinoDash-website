@@ -16,29 +16,24 @@ const MANIFESTO_LINES = [
 
 const TIMELINE = [
   {
-    year: "2023",
-    title: "the first idle dino",
-    body: "a 12-line html prototype that bounced on a horizon line. that's it. that was the whole pitch.",
+    year: "may 2026",
+    title: "the spark",
+    body: "started as a quick remake of the classic chrome dino game — just a sprite, a horizon, and a jump key. nothing more.",
   },
   {
-    year: "2024 q1",
-    title: "physics, themes, the run loop",
-    body: "the dino learned to jump, duck, and hate cacti. dark valley showed up first. mystic forest followed.",
+    year: "mid 2026",
+    title: "the pivot",
+    body: "the dino kept asking for a city. the project turned into a full chrome new tab extension — widgets, themes, customization, the works.",
   },
   {
-    year: "2024 q3",
-    title: "browsing memory",
-    body: "the new tab grew a sidebar. history became searchable, categorized, and pin-able — locally only.",
-  },
-  {
-    year: "2025",
+    year: "now",
     title: "v1.0 — the cinematic build",
     body: "every panel, popup, and pixel got a once-over. the website you're on is part of the same release.",
   },
   {
     year: "next",
     title: "?",
-    body: "a third theme. the community decides what it is.",
+    body: "upgrades are planned around whatever people send through the feedback page. the next big swing is yours to influence.",
   },
 ];
 
@@ -101,7 +96,7 @@ function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
-            <Pill>est. 2023</Pill>
+            <Pill>est. 2026</Pill>
             <Pill>v1.0.0</Pill>
             <Pill>locally hosted</Pill>
             <Pill>open to feedback</Pill>
@@ -122,6 +117,7 @@ function HeroLogo() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className="relative mx-auto aspect-square w-full max-w-[320px] sm:max-w-[360px]"
+      suppressHydrationWarning
     >
       {/* outer frame */}
       <div className="absolute inset-0 border border-white/15 bg-white/[0.02]">
@@ -147,6 +143,7 @@ function HeroLogo() {
         animate={{ scale: [1, 1.03, 1] }}
         transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
         className="absolute inset-0 flex items-center justify-center"
+        suppressHydrationWarning
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -282,19 +279,22 @@ function Creator() {
           transition={{ duration: 0.6 }}
           className="mt-12 grid grid-cols-1 gap-px overflow-hidden border border-white/15 bg-white/10 md:grid-cols-[280px_1fr]"
         >
-          {/* portrait cell — uses the dino as a stand-in */}
+          {/* portrait cell — real photo */}
           <div className="relative aspect-square bg-ink md:aspect-auto">
-            <CornerTicksSmall />
-            <div className="absolute inset-0 flex items-center justify-center">
+            <span className="pointer-events-none absolute left-2 top-2 z-10 h-2.5 w-2.5 border-l border-t border-black/70" />
+            <span className="pointer-events-none absolute right-2 top-2 z-10 h-2.5 w-2.5 border-r border-t border-black/70" />
+            <span className="pointer-events-none absolute bottom-2 left-2 z-10 h-2.5 w-2.5 border-b border-l border-black/70" />
+            <span className="pointer-events-none absolute bottom-2 right-2 z-10 h-2.5 w-2.5 border-b border-r border-black/70" />
+            <div className="absolute inset-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/idle-dino.webp"
-                alt=""
-                className="h-[60%] w-auto object-contain"
+                src="/assets/me.webp"
+                alt="Revanshu Pusadkar"
+                className="h-full w-full object-cover"
                 draggable={false}
               />
             </div>
-            <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.4em] text-white/45">
+            <div className="absolute bottom-3 left-3 right-3 z-10 flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.4em] text-black/80">
               <span>portrait</span>
               <span>id · 0001</span>
             </div>
@@ -309,13 +309,13 @@ function Creator() {
               Revanshu Pusadkar
             </h3>
             <p className="mt-2 font-mono text-[12px] uppercase tracking-[0.3em] text-white/55">
-              designer · engineer · part-time runner
+              developer · designer · builder
             </p>
 
             <p className="mt-6 max-w-xl font-sans text-[15px] leading-relaxed text-white/75">
-              builds tools that pay attention. dinodash started as a way to
-              make the most boring 200 milliseconds of the day — opening a new
-              tab — feel a little less boring.
+              always trying to build fun things that can wow people. dinodash
+              started that way too — a chrome dino remake that grew teeth and a
+              whole new tab around it.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden border border-white/15 bg-white/10 sm:grid-cols-3">
@@ -326,19 +326,19 @@ function Creator() {
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="/feedback"
+                href="mailto:revanshu444@gmail.com"
                 className="btn-press group inline-flex items-center gap-2.5 border border-white bg-white px-5 py-2.5 font-mono text-[12px] uppercase tracking-[0.25em] text-black hover:bg-black hover:text-white"
               >
                 say hi
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <SocialLink
-                href="https://instagram.com/revanshu04"
+                href="https://instagram.com/revanshu_04"
                 label="instagram"
               />
               <SocialLink href="https://x.com/Revanshu04" label="x" />
               <SocialLink
-                href="https://linkedin.com/in/revanshu-pusadkar"
+                href="https://www.linkedin.com/in/revanshu/"
                 label="linkedin"
               />
             </div>

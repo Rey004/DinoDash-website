@@ -10,6 +10,11 @@ const NAV_LINKS = [
   { label: "feedback", href: "/feedback" },
 ];
 
+const SOCIALS = [
+  { label: "instagram", href: "#", glyph: InstagramGlyph },
+  { label: "product hunt", href: "#", glyph: ProductHuntGlyph },
+];
+
 /**
  * SiteHeader — fixed top bar across the page.
  *
@@ -81,13 +86,33 @@ export default function SiteHeader({ revealAfter = 2400 }) {
           </nav>
 
           {/* add to chrome — upper right edge */}
-          <a
-            href="#act7"
-            className="btn-press group hidden items-center gap-2.5 border border-white bg-white px-5 py-2 font-mono text-[12px] uppercase tracking-[0.25em] text-black hover:bg-black hover:text-white sm:inline-flex"
-          >
-            add to chrome
-            <span className="transition-transform group-hover:translate-x-1">→</span>
-          </a>
+          <div className="hidden items-center gap-2 sm:flex">
+            <a
+              href={SOCIALS[0].href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={SOCIALS[0].label}
+              className="btn-press inline-flex h-9 w-9 items-center justify-center border border-white/25 bg-white/[0.04] text-white/75 hover:border-white hover:text-white"
+            >
+              <InstagramGlyph />
+            </a>
+            <a
+              href={SOCIALS[1].href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={SOCIALS[1].label}
+              className="btn-press inline-flex h-9 w-9 items-center justify-center border border-white/25 bg-white/[0.04] text-white/75 hover:border-white hover:text-white"
+            >
+              <ProductHuntGlyph />
+            </a>
+            <a
+              href="#act7"
+              className="btn-press group inline-flex items-center gap-2.5 border border-white bg-white px-5 py-2 font-mono text-[12px] uppercase tracking-[0.25em] text-black hover:bg-black hover:text-white"
+            >
+              add to chrome
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          </div>
 
           {/* mobile toggle */}
           <button
@@ -208,12 +233,37 @@ export default function SiteHeader({ revealAfter = 2400 }) {
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </a>
 
+          {/* socials row */}
+          <div
+            className={`mt-5 flex items-center justify-center gap-3 transition-all duration-500 ${
+              open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
+            }`}
+            style={{ transitionDelay: open ? `${120 + (NAV_LINKS.length + 1) * 70}ms` : "0ms" }}
+          >
+            {SOCIALS.map((s) => {
+              const Glyph = s.glyph;
+              return (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={s.label}
+                  onClick={() => setOpen(false)}
+                  className="btn-press inline-flex h-11 w-11 items-center justify-center border border-white/25 bg-white/[0.04] text-white/80 hover:border-white hover:text-white"
+                >
+                  <Glyph />
+                </a>
+              );
+            })}
+          </div>
+
           {/* footer line inside overlay */}
           <div
             className={`mt-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-white/35 transition-all duration-500 ${
               open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
             }`}
-            style={{ transitionDelay: open ? `${120 + (NAV_LINKS.length + 1) * 70}ms` : "0ms" }}
+            style={{ transitionDelay: open ? `${120 + (NAV_LINKS.length + 2) * 70}ms` : "0ms" }}
           >
             <span className="flex items-center gap-2">
               <span className="inline-block h-1 w-1 animate-pulse bg-white/60" />
@@ -287,5 +337,47 @@ function NavLabel({ label, href, className = "" }) {
     >
       {label}
     </span>
+  );
+}
+
+/* ---- social glyphs ---- */
+
+function InstagramGlyph() {
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 24 24"
+      width="14"
+      height="14"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17" cy="7" r="0.9" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function ProductHuntGlyph() {
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 24 24"
+      width="14"
+      height="14"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="9.25" />
+      <path d="M9.5 7.5h4a3 3 0 0 1 0 6H9.5V17" />
+      <path d="M9.5 7.5v6" />
+    </svg>
   );
 }

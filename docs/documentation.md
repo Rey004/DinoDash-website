@@ -40,7 +40,7 @@ It runs locally on your device. No accounts, no syncing, no telemetry.
 
 ## Getting Started
 
-1. Install DinoDash from the Chrome Web Store (or load it as an unpacked extension during development).
+1. Install DinoDash from the Chrome Web Store .
 2. Open a new tab — DinoDash takes over the page.
 3. Press `Space` to start the game, or just hang out and use the widgets around it.
 4. Click the DinoDash icon in your toolbar to access quick settings, themes, and your high score.
@@ -51,7 +51,7 @@ It runs locally on your device. No accounts, no syncing, no telemetry.
 
 A fresh take on the classic offline runner.
 
-![The DinoDash runner in action](placeholder:docs-game-action)
+![The DinoDash runner in action](/assets/game_preview.webp)
 
 ### How to play
 
@@ -74,7 +74,7 @@ A fresh take on the classic offline runner.
 
 DinoDash ships with two themes that change the entire look of the new tab.
 
-![The two themes side-by-side](placeholder:docs-themes)
+![The two themes side-by-side](/assets/themes_preview.webp)
 
 | Theme | Vibe |
 |-------|------|
@@ -117,7 +117,7 @@ It's the same pattern used in the History sidebar's category filter, so once you
 
 A small daily checkpoint widget pinned to the top-right of the page.
 
-![Today's Run widget in the corner](placeholder:docs-todays-run)
+![Today's Run widget in the corner](/assets/todays_run_widget_preview.webp)
 
 ### What it does
 
@@ -137,7 +137,7 @@ It's a quick, friction-free way to keep your day in view without switching apps.
 
 A bottom-left bookmark hub for the sites you actually open every day.
 
-![Favourite Links hub](placeholder:docs-favourite-links)
+![Favourite Links hub](/assets/favaourte_link_preview.webp)
 
 ### What it does
 
@@ -157,7 +157,7 @@ Browser bookmarks live behind a click. Favourite Links lives right on your new t
 
 A sliding right-edge panel that turns Chrome's flat history into something you can actually navigate.
 
-![History sidebar, expanded](placeholder:docs-history-sidebar)
+![History sidebar, expanded](/assets/history_preview.webp)
 
 ### Opening it
 
@@ -207,7 +207,7 @@ Clicking the entry opens it in a new tab.
 
 The second tab inside the History sidebar. It turns your raw browsing data into something you can read at a glance.
 
-![Analytics tab — category bars and insights](placeholder:docs-analytics)
+![Analytics tab — category bars and insights](/assets/analytics_preview.webp)
 
 ### Category Distribution
 
@@ -262,7 +262,7 @@ These survive across sessions, so you can watch them grow over weeks and months.
 
 Click the DinoDash icon in your Chrome toolbar to open a compact control panel.
 
-![Toolbar popup](placeholder:docs-toolbar-popup)
+![Toolbar popup](/assets/popup_preview.webp)
 
 What's inside:
 

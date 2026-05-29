@@ -9,7 +9,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
  * Two real "open" portals (Dark Valley + Mystic Forest) using the
  * provided artwork, plus a third minimal locked card for the next theme.
  */
-export default function Act3Portals() {
+export default function Act4Portals() {
   return (
     <section id="act3" className="relative w-full bg-ink text-paper">
       <div className="mx-4 flex items-end justify-between gap-4 pb-8 pt-20 sm:mx-8 sm:gap-6 sm:pb-10 sm:pt-24">
