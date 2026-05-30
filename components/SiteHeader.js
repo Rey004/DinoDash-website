@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Logo from "./Logo";
 
 const NAV_LINKS = [
@@ -71,12 +72,12 @@ export default function SiteHeader({ revealAfter = 2400 }) {
       >
         <div className="flex items-center justify-between px-5 py-3 sm:px-10 sm:py-3.5">
           {/* brand — upper left edge */}
-          <a href="/" className="flex items-center" aria-label="DinoDash home">
+          <Link href="/" className="flex items-center" aria-label="DinoDash home">
             <Logo
               size={32}
               wordmarkClass="font-mono text-[13px] uppercase tracking-[0.32em] text-white"
             />
-          </a>
+          </Link>
 
           {/* desktop nav — centered */}
           <nav className="hidden items-center gap-8 sm:flex">
@@ -291,7 +292,7 @@ function OverlayLink({ link, index, open, onClick }) {
 
   if (link.href) {
     return (
-      <a
+      <Link
         href={link.href}
         onClick={onClick}
         className={`${baseCls} text-white hover:text-white/70`}
@@ -299,7 +300,7 @@ function OverlayLink({ link, index, open, onClick }) {
       >
         <span>{link.label}</span>
         <span className="font-mono text-[10px] tracking-[0.3em] text-white/40">{number}</span>
-      </a>
+      </Link>
     );
   }
 
@@ -320,12 +321,12 @@ function OverlayLink({ link, index, open, onClick }) {
 function NavLabel({ label, href, className = "" }) {
   if (href) {
     return (
-      <a
+      <Link
         href={href}
         className={`font-mono text-[11px] uppercase tracking-[0.3em] text-white/60 transition-colors hover:text-white ${className}`}
       >
         {label}
-      </a>
+      </Link>
     );
   }
   return (

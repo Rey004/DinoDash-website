@@ -1,6 +1,8 @@
 import { JetBrains_Mono, Inter } from "next/font/google";
 import CustomCursor from "@/components/CustomCursor";
+import RouteTransition from "@/components/RouteTransition";
 import ScrollProgress from "@/components/ScrollProgress";
+import SiteLoader from "@/components/SiteLoader";
 import SmoothScroller from "@/components/SmoothScroller";
 import "./globals.css";
 
@@ -38,6 +40,8 @@ export default function RootLayout({ children }) {
         <SmoothScroller />
         <CustomCursor />
         <ScrollProgress />
+        <RouteTransition />
+        <SiteLoader />
         {children}
       </body>
     </html>

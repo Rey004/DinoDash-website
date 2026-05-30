@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Logo from "./Logo";
 
 /**
@@ -112,16 +113,25 @@ function FooterColumn({ title, links }) {
         {title}
       </div>
       <ul className="mt-4 space-y-2.5">
-        {links.map((l) => (
-          <li key={l.label}>
-            <a
-              href={l.href}
-              className="font-mono text-[12px] uppercase tracking-[0.18em] text-white/70 transition-colors hover:text-white"
-            >
-              {l.label}
-            </a>
-          </li>
-        ))}
+        {links.map((l) => {
+          const isExternal = /^https?:/.test(l.href);
+          const isHash = l.href.startsWith("/#") || l.href.startsWith("#");
+          const cls =
+            "font-mono text-[12px] uppercase tracking-[0.18em] text-white/70 transition-colors hover:text-white";
+          return (
+            <li key={l.label}>
+              {isExternal || isHash ? (
+                <a href={l.href} className={cls}>
+                  {l.label}
+                </a>
+              ) : (
+                <Link href={l.href} className={cls}>
+                  {l.label}
+                </Link>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
