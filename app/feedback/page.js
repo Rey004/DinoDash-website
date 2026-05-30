@@ -1,4 +1,4 @@
-import FeedbackPage from "@/components/FeedbackPage";
+import FeedbackPage from "@/components/pages/FeedbackPage";
 
 export const metadata = {
   title: "Feedback — DinoDash",

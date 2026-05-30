@@ -51,7 +51,7 @@ It runs locally on your device. No accounts, no syncing, no telemetry.
 
 A fresh take on the classic offline runner.
 
-![The DinoDash runner in action](/assets/game_preview.webp)
+![The DinoDash runner in action](/assets/docs/game_preview.webp)
 
 ### How to play
 
@@ -74,7 +74,7 @@ A fresh take on the classic offline runner.
 
 DinoDash ships with two themes that change the entire look of the new tab.
 
-![The two themes side-by-side](/assets/themes_preview.webp)
+![The two themes side-by-side](/assets/docs/themes_preview.webp)
 
 | Theme | Vibe |
 |-------|------|
@@ -117,7 +117,7 @@ It's the same pattern used in the History sidebar's category filter, so once you
 
 A small daily checkpoint widget pinned to the top-right of the page.
 
-![Today's Run widget in the corner](/assets/todays_run_widget_preview.webp)
+![Today's Run widget in the corner](/assets/docs/todays_run_widget_preview.webp)
 
 ### What it does
 
@@ -137,7 +137,7 @@ It's a quick, friction-free way to keep your day in view without switching apps.
 
 A bottom-left bookmark hub for the sites you actually open every day.
 
-![Favourite Links hub](/assets/favaourte_link_preview.webp)
+![Favourite Links hub](/assets/docs/favourite_link_preview.webp)
 
 ### What it does
 
@@ -157,7 +157,7 @@ Browser bookmarks live behind a click. Favourite Links lives right on your new t
 
 A sliding right-edge panel that turns Chrome's flat history into something you can actually navigate.
 
-![History sidebar, expanded](/assets/history_preview.webp)
+![History sidebar, expanded](/assets/docs/history_preview.webp)
 
 ### Opening it
 
@@ -207,7 +207,7 @@ Clicking the entry opens it in a new tab.
 
 The second tab inside the History sidebar. It turns your raw browsing data into something you can read at a glance.
 
-![Analytics tab — category bars and insights](/assets/analytics_preview.webp)
+![Analytics tab — category bars and insights](/assets/docs/analytics_preview.webp)
 
 ### Category Distribution
 
@@ -262,7 +262,7 @@ These survive across sessions, so you can watch them grow over weeks and months.
 
 Click the DinoDash icon in your Chrome toolbar to open a compact control panel.
 
-![Toolbar popup](/assets/popup_preview.webp)
+![Toolbar popup](/assets/docs/popup_preview.webp)
 
 What's inside:
 

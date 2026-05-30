@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import ErrorScreen from "@/components/ErrorScreen";
+import ErrorScreen from "@/components/pages/ErrorScreen";
 
 /**
  * Global error boundary — catches errors thrown inside any route

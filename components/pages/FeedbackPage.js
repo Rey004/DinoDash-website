@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "./Logo";
+import Logo from "../visuals/Logo";
 import { submitFeedback } from "@/lib/feedback";
 
 /* ================================================================== */
@@ -641,7 +641,7 @@ function SuccessScreen({ onAnother }) {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/assets/idle-dino.webp"
+            src="/assets/dino/idle-dino.webp"
             alt=""
             className="h-full w-full object-contain object-bottom"
             draggable={false}

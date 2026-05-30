@@ -1,4 +1,4 @@
-import ErrorScreen from "@/components/ErrorScreen";
+import ErrorScreen from "@/components/pages/ErrorScreen";
 
 export const metadata = {
   title: "404 — Lost in the dark valley · DinoDash",

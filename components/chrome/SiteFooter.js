@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Logo from "./Logo";
+import Logo from "../visuals/Logo";
 
 /**
  * Footer columns are limited to:

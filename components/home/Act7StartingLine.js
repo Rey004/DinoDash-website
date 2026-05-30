@@ -71,7 +71,7 @@ export default function Act7StartingLine() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/assets/idle-dino.webp"
+              src="/assets/dino/idle-dino.webp"
               alt="DinoDash"
               draggable={false}
               className="h-full w-full object-contain object-bottom"

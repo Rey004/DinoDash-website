@@ -31,14 +31,14 @@ export default function Act4Portals() {
           tag="theme · 01"
           title="Dark Valley"
           desc="rain-soaked neon city. the run feels heavier when the sky's open."
-          src="/assets/dark-valley.webp"
+          src="/assets/themes/dark-valley/dark-valley.webp"
           dataAsset="act3-dark-valley"
         />
         <Portal
           tag="theme · 02"
           title="Mystic Forest"
           desc="ancient pines breathing slow green light. fireflies for company."
-          src="/assets/mystic-forest.webp"
+          src="/assets/themes/mystic-forest/mystic-forest.webp"
           dataAsset="act3-mystic-forest"
         />
         <LockedPortal />

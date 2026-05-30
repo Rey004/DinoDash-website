@@ -72,13 +72,13 @@ export default function Act5GameStrip() {
           number="01"
           state="standby"
           title="press space to begin"
-          src="/assets/idle-dino.webp"
+          src="/assets/dino/idle-dino.webp"
         />
         <Cell
           number="02"
           state="run"
           title="hold the line. duck the rest."
-          src="/assets/run-dino.webp"
+          src="/assets/dino/run-dino.webp"
         />
       </motion.div>
 

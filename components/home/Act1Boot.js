@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Rain from "./Rain";
-import SysLogCard from "./ui/SysLogCard";
-import HudBadge from "./ui/HudBadge";
-import CornerButton from "./ui/CornerButton";
-import { Key } from "./ui/PressKey";
+import Rain from "../visuals/Rain";
+import SysLogCard from "../ui/SysLogCard";
+import HudBadge from "../ui/HudBadge";
+import CornerButton from "../ui/CornerButton";
+import { Key } from "../ui/PressKey";
 
 const LINES = [
   "> initializing DinoDash...",
@@ -65,7 +65,7 @@ export default function Act1Boot() {
         className="absolute inset-0"
       >
         <img
-          src="/assets/background.webp"
+          src="/assets/scenery/background.webp"
           alt=""
           data-asset="act1-skyline-bg"
           className="absolute inset-0 h-full w-full object-cover"
@@ -82,7 +82,7 @@ export default function Act1Boot() {
           data-asset="act1-dino"
         >
           <img
-            src="/assets/idle-dino.webp"
+            src="/assets/dino/idle-dino.webp"
             alt="DinoDash dino, idle stance"
             className="h-full w-full object-contain object-bottom"
             draggable={false}

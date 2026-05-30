@@ -1,12 +1,12 @@
-import Act1Boot from "@/components/Act1Boot";
-import Act2Curtain from "@/components/Act2Curtain";
-import Act3ExplodedTab from "@/components/Act3ExplodedTab";
-import Act4Portals from "@/components/Act4Portals";
-import Act5GameStrip from "@/components/Act5GameStrip";
-import Act6Receipt from "@/components/Act6Receipt";
-import Act7StartingLine from "@/components/Act7StartingLine";
-import SiteFooter from "@/components/SiteFooter";
-import SiteHeader from "@/components/SiteHeader";
+import Act1Boot from "@/components/home/Act1Boot";
+import Act2Curtain from "@/components/home/Act2Curtain";
+import Act3ExplodedTab from "@/components/home/Act3ExplodedTab";
+import Act4Portals from "@/components/home/Act4Portals";
+import Act5GameStrip from "@/components/home/Act5GameStrip";
+import Act6Receipt from "@/components/home/Act6Receipt";
+import Act7StartingLine from "@/components/home/Act7StartingLine";
+import SiteFooter from "@/components/chrome/SiteFooter";
+import SiteHeader from "@/components/chrome/SiteHeader";
 
 export default function Page() {
   return (

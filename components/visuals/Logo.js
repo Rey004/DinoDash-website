@@ -25,7 +25,7 @@ export default function Logo({
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/assets/logo-dark.webp"
+          src="/assets/brand/logo-dark.webp"
           alt="DinoDash logo"
           width={size}
           height={size}

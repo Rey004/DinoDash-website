@@ -72,7 +72,7 @@ export default function Act2Curtain() {
         {/* LEFT — default Chrome new tab screenshot */}
         <div className="absolute inset-0 bg-white">
           <img
-            src="/assets/default-new-tab.webp"
+            src="/assets/scenery/default-new-tab.webp"
             alt="Default Chrome new tab"
             data-asset="act2-default-tab"
             className="h-full w-full object-cover object-center"
@@ -87,7 +87,7 @@ export default function Act2Curtain() {
           aria-hidden
         >
           <img
-            src="/assets/dino-new-tab.webp"
+            src="/assets/scenery/dino-new-tab.webp"
             alt="DinoDash new tab"
             data-asset="act2-dino-tab"
             className="h-full w-full object-cover object-center"

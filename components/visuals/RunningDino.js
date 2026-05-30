@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
  * Anchor the parent so the sprite's bottom edge sits on a ground line,
  * and pass any height via className (e.g. h-[20vh]).
  */
-const FRAMES = ["/assets/run-dino.webp", "/assets/idle-dino.webp"];
+const FRAMES = ["/assets/dino/run-dino.webp", "/assets/dino/idle-dino.webp"];
 
 export default function RunningDino({
   running = true,
@@ -27,7 +27,7 @@ export default function RunningDino({
     return () => clearInterval(t);
   }, [running, fps]);
 
-  const src = running ? FRAMES[i] : "/assets/idle-dino.webp";
+  const src = running ? FRAMES[i] : "/assets/dino/idle-dino.webp";
 
   return (
     // eslint-disable-next-line @next/next/no-img-element

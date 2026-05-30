@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import SiteFooter from "./SiteFooter";
-import SiteHeader from "./SiteHeader";
+import SiteFooter from "../chrome/SiteFooter";
+import SiteHeader from "../chrome/SiteHeader";
 
 /* --------- content (dummy — swap with real copy later) --------- */
 
@@ -147,7 +147,7 @@ function HeroLogo() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/assets/logo-dark.webp"
+          src="/assets/brand/logo-dark.webp"
           alt="DinoDash logo"
           draggable={false}
           className="h-[55%] w-auto object-contain"
@@ -288,7 +288,7 @@ function Creator() {
             <div className="absolute inset-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/me.webp"
+                src="/assets/people/me.webp"
                 alt="Revanshu Pusadkar"
                 className="h-full w-full object-cover"
                 draggable={false}

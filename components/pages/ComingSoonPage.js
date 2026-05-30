@@ -1,6 +1,6 @@
-import DocPageShell from "./DocPageShell";
-import SiteFooter from "./SiteFooter";
-import SiteHeader from "./SiteHeader";
+import DocPageShell from "../docs/DocPageShell";
+import SiteFooter from "../chrome/SiteFooter";
+import SiteHeader from "../chrome/SiteHeader";
 
 /**
  * ComingSoonPage — placeholder shell for routes whose real content is

@@ -1,7 +1,7 @@
-import ChangelogList from "@/components/ChangelogList";
-import DocPageShell from "@/components/DocPageShell";
-import SiteFooter from "@/components/SiteFooter";
-import SiteHeader from "@/components/SiteHeader";
+import ChangelogList from "@/components/docs/ChangelogList";
+import DocPageShell from "@/components/docs/DocPageShell";
+import SiteFooter from "@/components/chrome/SiteFooter";
+import SiteHeader from "@/components/chrome/SiteHeader";
 import { parseMarkdown } from "@/lib/markdown";
 import { readMarkdown } from "@/lib/markdown.server";
 

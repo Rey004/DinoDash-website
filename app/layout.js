@@ -1,9 +1,9 @@
 import { JetBrains_Mono, Inter } from "next/font/google";
-import CustomCursor from "@/components/CustomCursor";
-import RouteTransition from "@/components/RouteTransition";
-import ScrollProgress from "@/components/ScrollProgress";
-import SiteLoader from "@/components/SiteLoader";
-import SmoothScroller from "@/components/SmoothScroller";
+import CustomCursor from "@/components/chrome/CustomCursor";
+import RouteTransition from "@/components/chrome/RouteTransition";
+import ScrollProgress from "@/components/chrome/ScrollProgress";
+import SiteLoader from "@/components/chrome/SiteLoader";
+import SmoothScroller from "@/components/chrome/SmoothScroller";
 import "./globals.css";
 
 const mono = JetBrains_Mono({
@@ -23,9 +23,9 @@ export const metadata = {
   description:
     "DinoDash replaces your Chrome new tab with a cinematic dino runner. Privacy-first. Endlessly playable.",
   icons: {
-    icon: "/assets/favicon.webp",
-    shortcut: "/assets/favicon.webp",
-    apple: "/assets/favicon.webp",
+    icon: "/assets/brand/favicon.webp",
+    shortcut: "/assets/brand/favicon.webp",
+    apple: "/assets/brand/favicon.webp",
   },
 };
 

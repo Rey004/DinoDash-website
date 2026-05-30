@@ -10,7 +10,7 @@ import {
   DummyMemoryPanel,
   DummyCornerLeft,
   DummyCornerRight,
-} from "./ui/DummyWidgets";
+} from "../ui/DummyWidgets";
 
 /**
  * Act 3 — The Anatomy
@@ -111,7 +111,7 @@ export default function Act3ExplodedTab() {
               style={{ aspectRatio: "1919 / 1021" }}
             >
               <img
-                src="/assets/dino-new-tab.webp"
+                src="/assets/scenery/dino-new-tab.webp"
                 alt="DinoDash new tab"
                 data-asset="act5-tab-screenshot"
                 className="absolute inset-0 h-full w-full object-cover object-center blur-sm"
