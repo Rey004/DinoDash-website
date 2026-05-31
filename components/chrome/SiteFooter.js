@@ -21,6 +21,7 @@ const SECTION_LINKS = [
 ];
 
 const NAV_LINKS = [
+  { label: "home", href: "/" },
   { label: "about", href: "/about" },
   { label: "docs", href: "/docs" },
   { label: "changelog", href: "/changelog" },

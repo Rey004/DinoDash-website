@@ -5,6 +5,7 @@ import Link from "next/link";
 import Logo from "../visuals/Logo";
 
 const NAV_LINKS = [
+  { label: "home", href: "/" },
   { label: "about", href: "/about" },
   { label: "docs", href: "/docs" },
   { label: "changelog", href: "/changelog" },
