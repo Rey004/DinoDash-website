@@ -494,7 +494,13 @@ function ScreenshotDrop({ value, onChange }) {
           setDrag(false);
           onFile(e.dataTransfer.files?.[0]);
         }}
-        onClick={() => inputRef.current?.click()}
+        onClick={(e) => {
+          // The screenshot field is wrapped in a <label>, which auto-
+          // forwards clicks to the hidden file input. Without this
+          // preventDefault the picker opens twice.
+          e.preventDefault();
+          inputRef.current?.click();
+        }}
         className={`flex cursor-pointer flex-col items-center justify-center gap-2 border border-dashed px-6 py-8 text-center transition-colors ${
           drag ? "border-white bg-white/[0.05]" : "border-white/30 bg-white/[0.02] hover:border-white/55"
         }`}
