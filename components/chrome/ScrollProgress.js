@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 /**
- * ScrollProgress — thin progress bar pinned to the bottom edge of the
+ * ScrollProgress — thin progress bar pinned to the upper edge of the
  * viewport. Width tracks the page's scroll position from 0% (top) to
  * 100% (bottom).
  */
@@ -29,7 +29,7 @@ export default function ScrollProgress() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none fixed inset-x-0 bottom-0 z-[80] h-[3px] bg-white/10"
+      className="pointer-events-none fixed inset-x-0 top-0 z-[80] h-[3px] bg-white/10"
     >
       <div
         className="h-full bg-white"

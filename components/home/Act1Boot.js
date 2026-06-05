@@ -7,6 +7,7 @@ import SysLogCard from "../ui/SysLogCard";
 import HudBadge from "../ui/HudBadge";
 import CornerButton from "../ui/CornerButton";
 import { Key } from "../ui/PressKey";
+import GithubGlyph from "../visuals/GithubGlyph";
 
 const LINES = [
   "> initializing DinoDash...",
@@ -196,10 +197,13 @@ export default function Act1Boot() {
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </a>
           <a
-            href="#act2"
+            href="https://github.com/Rey004/DinoDash"
+            target="_blank"
+            rel="noreferrer"
             className="btn-press inline-flex items-center gap-2 border border-white/40 bg-black/40 px-5 py-2.5 font-mono text-[12px] uppercase tracking-[0.25em] text-white/80 backdrop-blur-sm hover:border-white hover:text-white"
           >
-            see the difference
+            <GithubGlyph size={14} />
+            <span>star on github</span>
           </a>
         </motion.div>
 

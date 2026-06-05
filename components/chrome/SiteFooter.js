@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "../visuals/Logo";
+import GithubGlyph from "../visuals/GithubGlyph";
 
 /**
  * Footer columns are limited to:
@@ -26,6 +27,7 @@ const NAV_LINKS = [
   { label: "docs", href: "/docs" },
   { label: "changelog", href: "/changelog" },
   { label: "feedback", href: "/feedback" },
+  { label: "github", href: "https://github.com/Rey004/DinoDash" },
 ];
 
 export default function SiteFooter() {
@@ -46,6 +48,15 @@ export default function SiteFooter() {
 
           {/* socials */}
           <div className="mt-8 flex flex-wrap items-center gap-2">
+            <a
+              href="https://github.com/Rey004/DinoDash"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="btn-press inline-flex h-9 w-9 items-center justify-center border border-white/30 bg-white/[0.04] text-white/75 hover:border-white hover:text-white"
+            >
+              <GithubGlyph size={14} />
+            </a>
             <a
               href="#"
               target="_blank"

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "../visuals/Logo";
+import GithubGlyph from "../visuals/GithubGlyph";
 
 const NAV_LINKS = [
   { label: "home", href: "/" },
@@ -108,6 +109,15 @@ export default function SiteHeader({ revealAfter = 2400 }) {
               <ProductHuntGlyph />
             </a>
             <a
+              href="https://github.com/Rey004/DinoDash"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-press inline-flex h-9 items-center gap-2 border border-white/25 bg-white/[0.04] px-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white/80 hover:border-white hover:bg-white hover:text-black transition-colors"
+            >
+              <GithubGlyph size={14} />
+              <span>github</span>
+            </a>
+            <a
               href="#act7"
               className="btn-press group inline-flex items-center gap-2.5 border border-white bg-white px-5 py-2 font-mono text-[12px] uppercase tracking-[0.25em] text-black hover:bg-black hover:text-white"
             >
@@ -116,32 +126,46 @@ export default function SiteHeader({ revealAfter = 2400 }) {
             </a>
           </div>
 
-          {/* mobile toggle */}
-          <button
-            type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
-            className="relative z-[60] inline-flex h-9 w-9 items-center justify-center border border-white/30 bg-black/60 text-white sm:hidden"
-          >
-            <span className="relative block h-3 w-4">
-              <span
-                className={`absolute left-0 top-0 h-px w-full bg-white transition-transform ${
-                  open ? "translate-y-[6px] rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`absolute left-0 top-1/2 h-px w-full -translate-y-[0.5px] bg-white transition-opacity ${
-                  open ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <span
-                className={`absolute bottom-0 left-0 h-px w-full bg-white transition-transform ${
-                  open ? "-translate-y-[6px] -rotate-45" : ""
-                }`}
-              />
-            </span>
-          </button>
+          {/* mobile toggle & github link */}
+          <div className="flex items-center gap-2.5 sm:hidden">
+            <a
+              href="https://github.com/Rey004/DinoDash"
+              target="_blank"
+              rel="noreferrer"
+              className={`btn-press inline-flex h-9 items-center gap-2 border border-white/25 bg-black/60 px-3.5 font-mono text-[10px] uppercase tracking-[0.2em] text-white transition-all duration-300 hover:border-white ${
+                open ? "pointer-events-none -translate-x-2 opacity-0" : "translate-x-0 opacity-100"
+              }`}
+            >
+              <GithubGlyph size={13} />
+              <span>github</span>
+            </a>
+
+            <button
+              type="button"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+              className="relative z-[60] inline-flex h-9 w-9 items-center justify-center border border-white/30 bg-black/60 text-white"
+            >
+              <span className="relative block h-3 w-4">
+                <span
+                  className={`absolute left-0 top-0 h-px w-full bg-white transition-transform ${
+                    open ? "translate-y-[6px] rotate-45" : ""
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-1/2 h-px w-full -translate-y-[0.5px] bg-white transition-opacity ${
+                    open ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`absolute bottom-0 left-0 h-px w-full bg-white transition-transform ${
+                    open ? "-translate-y-[6px] -rotate-45" : ""
+                  }`}
+                />
+              </span>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -242,6 +266,16 @@ export default function SiteHeader({ revealAfter = 2400 }) {
             }`}
             style={{ transitionDelay: open ? `${120 + (NAV_LINKS.length + 1) * 70}ms` : "0ms" }}
           >
+            <a
+              href="https://github.com/Rey004/DinoDash"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="github"
+              onClick={() => setOpen(false)}
+              className="btn-press inline-flex h-11 w-11 items-center justify-center border border-white/25 bg-white/[0.04] text-white/80 hover:border-white hover:text-white"
+            >
+              <GithubGlyph size={18} />
+            </a>
             {SOCIALS.map((s) => {
               const Glyph = s.glyph;
               return (
