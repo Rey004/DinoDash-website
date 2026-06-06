@@ -28,6 +28,7 @@ const NAV_LINKS = [
   { label: "changelog", href: "/changelog" },
   { label: "feedback", href: "/feedback" },
   { label: "github", href: "https://github.com/Rey004/DinoDash" },
+  { label: "privacy policy", href: "/privacy" },
 ];
 
 export default function SiteFooter() {

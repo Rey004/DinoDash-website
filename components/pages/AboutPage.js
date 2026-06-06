@@ -268,7 +268,7 @@ function Timeline() {
 
 function Creator() {
   return (
-    <section className="relative border-b border-white/10 px-5 py-20 sm:px-10 sm:py-28">
+    <section id="creator" className="relative border-b border-white/10 px-5 py-20 sm:px-10 sm:py-28">
       <div className="mx-auto max-w-5xl">
         <SectionHeader index="04" title="the maker" subtitle="who" />
 
