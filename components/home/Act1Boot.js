@@ -190,7 +190,9 @@ export default function Act1Boot() {
           className="mt-7 flex flex-wrap items-center justify-center gap-2.5"
         >
           <a
-            href="#act7"
+            href="https://chromewebstore.google.com/detail/dinodash-interactive-new/biplgpkmcbidebfejmdkgppgifjpdggi?hl=en&authuser=0"
+            target="_blank"
+            rel="noreferrer"
             className="btn-press group inline-flex items-center gap-2.5 border border-white bg-white px-5 py-2.5 font-mono text-[12px] uppercase tracking-[0.25em] text-black hover:bg-black hover:text-white"
           >
             add to chrome

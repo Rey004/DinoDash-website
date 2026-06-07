@@ -92,9 +92,10 @@ export default function Act7StartingLine() {
 
         {/* CTA */}
         <motion.a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
+          href="https://chromewebstore.google.com/detail/dinodash-interactive-new/biplgpkmcbidebfejmdkgppgifjpdggi?hl=en&authuser=0"
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => {
             setPressed(true);
             setTimeout(() => setPressed(false), 600);
           }}

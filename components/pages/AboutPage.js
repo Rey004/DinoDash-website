@@ -366,7 +366,9 @@ function Outro() {
           you home.
         </p>
         <a
-          href="/#act7"
+          href="https://chromewebstore.google.com/detail/dinodash-interactive-new/biplgpkmcbidebfejmdkgppgifjpdggi?hl=en&authuser=0"
+          target="_blank"
+          rel="noreferrer"
           className="btn-press group mt-8 inline-flex items-center gap-3 border border-white bg-white px-6 py-3 font-mono text-[12px] uppercase tracking-[0.3em] text-black hover:bg-black hover:text-white"
         >
           add to chrome

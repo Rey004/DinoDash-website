@@ -118,7 +118,9 @@ export default function SiteHeader({ revealAfter = 2400 }) {
               <span>github</span>
             </a>
             <a
-              href="#act7"
+              href="https://chromewebstore.google.com/detail/dinodash-interactive-new/biplgpkmcbidebfejmdkgppgifjpdggi?hl=en&authuser=0"
+              target="_blank"
+              rel="noreferrer"
               className="btn-press group inline-flex items-center gap-2.5 border border-white bg-white px-5 py-2 font-mono text-[12px] uppercase tracking-[0.25em] text-black hover:bg-black hover:text-white"
             >
               add to chrome
@@ -248,7 +250,9 @@ export default function SiteHeader({ revealAfter = 2400 }) {
 
           {/* CTA */}
           <a
-            href="#act7"
+            href="https://chromewebstore.google.com/detail/dinodash-interactive-new/biplgpkmcbidebfejmdkgppgifjpdggi?hl=en&authuser=0"
+            target="_blank"
+            rel="noreferrer"
             onClick={() => setOpen(false)}
             className={`btn-press group mt-6 inline-flex w-full items-center justify-center gap-2.5 border border-white bg-white px-5 py-4 font-mono text-[12px] uppercase tracking-[0.3em] text-black transition-all duration-500 hover:bg-black hover:text-white ${
               open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
