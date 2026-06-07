@@ -27,7 +27,7 @@ const TIMELINE = [
   },
   {
     year: "now",
-    title: "v1.0 — the cinematic build",
+    title: "v1.1 — the cinematic build",
     body: "every panel, popup, and pixel got a once-over. the website you're on is part of the same release.",
   },
   {
@@ -97,7 +97,7 @@ function Hero() {
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <Pill>est. 2026</Pill>
-            <Pill>v1.0.0</Pill>
+            <Pill>v1.1.0</Pill>
             <Pill>locally hosted</Pill>
             <Pill>open to feedback</Pill>
           </div>

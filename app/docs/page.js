@@ -23,7 +23,7 @@ export default function DocsPage() {
     <>
       <SiteHeader revealAfter={0} />
       <DocPageShell
-        eyebrow="reference · v1.0.0"
+        eyebrow="reference · v1.1.0"
         title="documentation"
         subtitle="every feature in DinoDash — what it does, how it works, how to use it."
         wide
