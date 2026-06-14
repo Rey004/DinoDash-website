@@ -68,7 +68,7 @@ export default function SiteFooter() {
               <InstagramGlyph />
             </a>
             <a
-              href="#"
+              href="https://www.producthunt.com/products/dinodash?launch=dinodash"
               target="_blank"
               rel="noreferrer"
               aria-label="Product Hunt"

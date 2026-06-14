@@ -15,7 +15,7 @@ const NAV_LINKS = [
 
 const SOCIALS = [
   { label: "instagram", href: "#", glyph: InstagramGlyph },
-  { label: "product hunt", href: "#", glyph: ProductHuntGlyph },
+  { label: "product hunt", href: "https://www.producthunt.com/products/dinodash?launch=dinodash", glyph: ProductHuntGlyph },
 ];
 
 /**
